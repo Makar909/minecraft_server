@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chetos.lt — Ultimate Minecraft Сервер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widget.css">
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero__bg"></div>
+
+  <nav class="topbar" aria-label="Соціальні мережі">
+    <a href="#" aria-label="Discord" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3c-.211.375-.406.755-.582 1.14a18.27 18.27 0 0 0-4.052 0A12.9 12.9 0 0 0 11.34 3a19.9 19.9 0 0 0-3.76 1.37C4.4 8.06 3.68 11.65 3.94 15.19a19.9 19.9 0 0 0 5.99 3.02c.48-.65.91-1.35 1.28-2.08a12.9 12.9 0 0 1-2.02-.97c.17-.12.33-.25.49-.38a14.2 14.2 0 0 0 12.65 0c.16.13.32.26.49.38-.64.38-1.32.71-2.02.97.37.73.8 1.43 1.28 2.08a19.86 19.86 0 0 0 6-3.02c.36-4.2-.63-7.76-3.77-10.82ZM9.68 13.02c-.99 0-1.8-.9-1.8-2.01 0-1.11.79-2.01 1.8-2.01 1.02 0 1.83.91 1.8 2.01 0 1.11-.79 2.01-1.8 2.01Zm5.65 0c-.99 0-1.8-.9-1.8-2.01 0-1.11.79-2.01 1.8-2.01 1.02 0 1.83.91 1.8 2.01 0 1.11-.78 2.01-1.8 2.01Z"/></svg>
+    </a>
+    <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.23 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22C18.34 21.23 22 17.08 22 12.06Z"/></svg>
+    </a>
+  </nav>
+
+  <div class="brand">
+    <svg class="brand__logo" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Емблема Chetos.lt">
+      <defs>
+        <linearGradient id="logoFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1c3766"/>
+          <stop offset="55%" stop-color="#12234a"/>
+          <stop offset="100%" stop-color="#0a1730"/>
+        </linearGradient>
+        <linearGradient id="logoRim" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#8fdcf0"/>
+          <stop offset="100%" stop-color="#4d7ed1"/>
+        </linearGradient>
+      </defs>
+
+      <!-- shield -->
+      <path d="M110 10 L198 40 V104 C198 156 162 190 110 210 C58 190 22 156 22 104 V40 Z"
+            fill="url(#logoFill)" stroke="url(#logoRim)" stroke-width="5"/>
+
+      <!-- inner pixel border -->
+      <path d="M110 26 L182 50 V104 C182 148 154 176 110 193 C66 176 38 148 38 104 V50 Z"
+            fill="none" stroke="#67c8e0" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 5"/>
+
+      <!-- crossed pixel swords -->
+      <g stroke="#e8b64d" stroke-width="6" stroke-linecap="square">
+        <line x1="66" y1="150" x2="150" y2="72"/>
+        <line x1="150" y1="150" x2="66" y2="72"/>
+      </g>
+      <g fill="#eaf6ff">
+        <rect x="60" y="66" width="12" height="12"/>
+        <rect x="148" y="66" width="12" height="12"/>
+      </g>
+
+      <!-- monogram -->
+      <text x="110" y="112" text-anchor="middle" font-family="'Press Start 2P', monospace"
+            font-size="34" fill="#eaf6ff" stroke="#0a1730" stroke-width="2" paint-order="stroke">C</text>
+
+      <!-- corner pixel accents -->
+      <rect x="30" y="42" width="8" height="8" fill="#67c8e0"/>
+      <rect x="182" y="42" width="8" height="8" fill="#67c8e0"/>
+      <rect x="30" y="150" width="8" height="8" fill="#67c8e0"/>
+      <rect x="182" y="150" width="8" height="8" fill="#67c8e0"/>
+    </svg>
+    <p class="brand__eyebrow">Ultimate Minecraft Сервер</p>
+  </div>
+
+  <div class="features">
+    <a class="feature" href="#kontakty">
+      <div class="feature__icon-wrap">
+        <svg viewBox="0 0 92 92" role="img" aria-label="Іконка контактів">
+          <defs>
+            <linearGradient id="icoContact" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#67c8e0"/>
+              <stop offset="100%" stop-color="#4d7ed1"/>
+            </linearGradient>
+          </defs>
+          <path d="M14 24h64a8 8 0 0 1 8 8v26a8 8 0 0 1-8 8H46l-16 15v-15H14a8 8 0 0 1-8-8V32a8 8 0 0 1 8-8Z"
+                fill="url(#icoContact)" fill-opacity="0.18" stroke="url(#icoContact)" stroke-width="3.5"/>
+          <circle cx="30" cy="49" r="4" fill="#eaf6ff"/>
+          <circle cx="46" cy="49" r="4" fill="#eaf6ff"/>
+          <circle cx="62" cy="49" r="4" fill="#eaf6ff"/>
+        </svg>
+      </div>
+      <p class="feature__hint">Виникла проблема? Ти можеш знайти нас тут!</p>
+      <h3 class="feature__title">Контакти</h3>
+    </a>
+
+    <a class="feature" href="posluhy.html">
+      <div class="feature__icon-wrap">
+        <svg viewBox="0 0 92 92" role="img" aria-label="Іконка послуг">
+          <g stroke-linecap="square">
+            <line x1="20" y1="72" x2="66" y2="26" stroke="#e8b64d" stroke-width="7"/>
+            <rect x="16" y="68" width="12" height="12" fill="#e8b64d"/>
+            <rect x="62" y="18" width="10" height="10" fill="#eaf6ff"/>
+            <line x1="72" y1="72" x2="26" y2="26" stroke="#67c8e0" stroke-width="7"/>
+            <rect x="64" y="68" width="12" height="12" fill="#67c8e0"/>
+            <rect x="18" y="18" width="10" height="10" fill="#eaf6ff"/>
+          </g>
+        </svg>
+      </div>
+      <p class="feature__hint">Хочеш стати найсильнішим? Завітай</p>
+      <h3 class="feature__title">Послуги</h3>
+    </a>
+
+    <a class="feature" href="holosuvannia.html">
+      <div class="feature__icon-wrap">
+        <svg viewBox="0 0 92 92" role="img" aria-label="Іконка голосування">
+          <defs>
+            <linearGradient id="icoVote" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f4d17e"/>
+              <stop offset="100%" stop-color="#e8b64d"/>
+            </linearGradient>
+          </defs>
+          <path d="M46 12 L55 36 L80 36 L60 52 L68 76 L46 61 L24 76 L32 52 L12 36 L37 36 Z"
+                fill="url(#icoVote)" stroke="#12234a" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <p class="feature__hint">Допоможи нам піднятись вище!</p>
+      <h3 class="feature__title">Голосування</h3>
+    </a>
+
+    <a class="feature" href="#wiki">
+      <div class="feature__icon-wrap">
+        <svg viewBox="0 0 92 92" role="img" aria-label="Іконка Wiki">
+          <path d="M46 26c-8-6-20-8-32-6v42c12-2 24 0 32 6c8-6 20-8 32-6V20c-12-2-24 0-32 6Z"
+                fill="#101f3d" stroke="#67c8e0" stroke-width="3.5" stroke-linejoin="round"/>
+          <line x1="46" y1="26" x2="46" y2="68" stroke="#67c8e0" stroke-width="3"/>
+          <line x1="20" y1="34" x2="34" y2="32" stroke="#eaf6ff" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="42" x2="34" y2="40" stroke="#eaf6ff" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="58" y1="32" x2="72" y2="34" stroke="#eaf6ff" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="58" y1="40" x2="72" y2="42" stroke="#eaf6ff" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="feature__hint">Потрібна допомога? Завітай і дізнайся все!</p>
+      <h3 class="feature__title">Wiki</h3>
+    </a>
+  </div>
+
+  <div class="status-wrap">
+    <div class="status">
+      <span class="status__dot"></span>
+      Сервер зараз вимкнений!
+    </div>
+  </div>
+</section>
+
+<!-- Швидкі дії: плаваюче віяло-меню -->
+<div class="qa-fan-wrap">
+  <div class="qa-fan">
+    <div class="qa-touch qa-touch--left" aria-hidden="true"></div>
+    <div class="qa-touch qa-touch--middle" aria-hidden="true"></div>
+    <div class="qa-touch qa-touch--right" aria-hidden="true"></div>
+
+    <button type="button" class="qa-btn qa-btn--refresh" title="Оновити сторінку" aria-label="Оновити сторінку" onclick="location.reload()">
+      <svg class="qa-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path d="M446.208 566.72h369.28c-2.944 103.808-39.36 190.72-109.376 260.736s-156.608 106.432-259.904 109.376c-103.808-2.944-190.72-39.36-260.736-109.376s-106.432-156.928-109.376-260.736c2.944-103.232 39.36-189.888 109.376-259.904S342.4 200.448 446.208 197.504v369.216z m383.296-383.232c70.016 70.016 106.432 156.928 109.376 260.736H568.704V74.112c103.872 2.944 190.784 39.36 260.8 109.376z" fill="#ffffff"></path>
+      </svg>
+    </button>
+
+    <button type="button" class="qa-btn qa-btn--copy" title="Скопіювати IP сервера" aria-label="Скопіювати IP сервера" onclick="qaCopyIP()">
+      <svg class="qa-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path d="M773.907692 992.768h-590.76923c-48.864492 0-88.615385-39.754831-88.615385-88.615385V120.032492c0-48.852677 39.743015-88.615385 88.599631-88.631138l379.076923-0.169354h0.047261c35.233477 0 78.217846 18.699815 102.230646 44.480985l158.0032 169.621661C845.686154 270.245415 862.523077 313.040738 862.523077 347.096615v300.780308c0 27.1872-22.043569 49.230769-49.230769 49.230769s-49.230769-22.043569-49.23077-49.230769V347.096615c0-9.168738-7.388554-27.951262-13.627076-34.650584l-158.011077-169.6256c-5.490215-5.891938-22.122338-13.126892-30.176493-13.126893h-0.003938L192.984615 129.858954V894.306462h571.076923V805.415385c0-27.1872 22.043569-49.230769 49.23077-49.23077s49.230769 22.043569 49.230769 49.23077v98.73723c0 48.864492-39.754831 88.615385-88.615385 88.615385z" fill="#ffffff"></path>
+        <path d="M414.802708 753.829415a49.092923 49.092923 0 0 1-34.812062-14.418707l-90.289231-90.285293c-19.223631-19.223631-19.227569-50.396554 0-69.624123 19.223631-19.223631 50.396554-19.223631 69.624123 0l55.47717 55.473231 187.7504-187.746461c19.227569-19.223631 50.396554-19.219692 69.624123 0 19.227569 19.227569 19.227569 50.396554 0 69.624123l-222.562462 222.558523a49.073231 49.073231 0 0 1-34.812061 14.418707z" fill="#ffffff"></path>
+      </svg>
+    </button>
+
+    <button type="button" class="qa-btn qa-btn--discord" title="Наш Discord" aria-label="Приєднатися до Discord" onclick="qaOpenDiscord()">
+      <svg class="qa-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path d="M793.6 678.4c29.866667-51.2 81.066667-76.8 132.266667-72.533333 8.533333-29.866667 12.8-64 12.8-98.133334 0-29.866667-4.266667-59.733333-8.533334-85.333333-51.2 8.533333-106.666667-21.333333-136.533333-72.533333-29.866667-51.2-25.6-115.2 8.533333-153.6-46.933333-42.666667-98.133333-72.533333-157.866666-93.866667-17.066667 51.2-68.266667 85.333333-132.266667 85.333333s-110.933333-34.133333-132.266667-85.333333c-59.733333 21.333333-110.933333 55.466667-157.866666 98.133333 34.133333 42.666667 38.4 102.4 8.533333 153.6-29.866667 51.2-85.333333 76.8-136.533333 68.266667-4.266667 29.866667-8.533333 59.733333-8.533334 89.6 0 34.133333 4.266667 64 12.8 93.866667 51.2-4.266667 102.4 21.333333 132.266667 72.533333 25.6 51.2 25.6 106.666667-4.266667 149.333333 46.933333 42.666667 98.133333 72.533333 157.866667 89.6 21.333333-46.933333 68.266667-76.8 128-76.8s106.666667 29.866667 128 76.8c59.733333-17.066667 110.933333-51.2 157.866667-89.6-29.866667-42.666667-34.133333-98.133333-4.266667-149.333333z m-281.6 17.066667c-102.4 0-183.466667-81.066667-183.466667-183.466667S409.6 328.533333 512 328.533333s183.466667 81.066667 183.466667 183.466667-81.066667 183.466667-183.466667 183.466667z" fill="#ffffff"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+<div class="qa-toast" id="qaToast" role="status" aria-live="polite"></div>
+
+<script src="widget.js"></script>
+</body>
+</html>
