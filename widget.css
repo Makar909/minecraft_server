@@ -1,0 +1,157 @@
+/* ============================================================
+   Швидкі дії — плаваюче віяло-меню (адаптовано під тему Chetos.lt)
+   Джерело ідеї: Uiverse.io by GreyD097
+   ============================================================ */
+
+.qa-fan-wrap{
+  position: fixed;
+  right: clamp(16px, 4vw, 28px);
+  bottom: clamp(16px, 4vh, 28px);
+  z-index: 999;
+}
+
+.qa-fan{
+  position: relative;
+  width: 12rem;
+  height: 5rem;
+  display: flex;
+}
+
+.qa-fan .qa-touch{
+  position: relative;
+  z-index: 60;
+  height: 100%;
+  flex: 1;
+  cursor: pointer;
+}
+
+.qa-fan .qa-btn{
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0.88;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45), inset 0 0 4px rgba(0,0,0,0.3);
+}
+
+.qa-fan .qa-icon{
+  width: 22px;
+  height: 22px;
+  opacity: 0.85;
+  transition: 0.25s;
+  pointer-events: none;
+}
+
+/* left button — refresh / reload */
+.qa-fan .qa-btn--refresh{
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: 30;
+  background: var(--blue-accent, #4d7ed1);
+}
+
+/* right button — copy server IP */
+.qa-fan .qa-btn--copy{
+  transform: translate(-50%, -50%) rotate(-115deg);
+  z-index: 40;
+  background: var(--gold, #e8b64d);
+}
+
+/* middle button — Discord / community (spins) */
+.qa-fan .qa-btn--discord{
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 50;
+  background: var(--blue-glow, #67c8e0);
+}
+.qa-fan .qa-btn--discord .qa-icon{
+  animation: qa-spin 2.2s linear infinite;
+  animation-play-state: paused;
+}
+
+/* hover / active interactions */
+.qa-fan .qa-touch--left:hover ~ .qa-btn--refresh{
+  opacity: 1;
+  transform: translate(-170%, -50%) rotate(-90deg) scale(1.05);
+}
+.qa-fan .qa-touch--left:hover ~ .qa-btn--refresh .qa-icon{
+  width: 24px;
+  opacity: 1;
+}
+.qa-fan .qa-touch--left:active ~ .qa-btn--refresh{
+  transform: translate(-170%, -50%) rotate(-90deg) scale(0.9);
+}
+
+.qa-fan .qa-touch--right:hover ~ .qa-btn--copy{
+  opacity: 1;
+  transform: translate(70%, -50%) rotate(90deg) scale(1.05);
+}
+.qa-fan .qa-touch--right:hover ~ .qa-btn--copy .qa-icon{
+  width: 24px;
+  opacity: 1;
+}
+.qa-fan .qa-touch--right:active ~ .qa-btn--copy{
+  transform: translate(70%, -50%) rotate(90deg) scale(0.9);
+}
+
+.qa-fan .qa-touch--middle:hover ~ .qa-btn--discord{
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+}
+.qa-fan .qa-touch--middle:hover ~ .qa-btn--discord .qa-icon{
+  width: 24px;
+  opacity: 1;
+}
+.qa-fan .qa-touch--middle:active ~ .qa-btn--discord{
+  transform: translate(-50%, -50%) rotate(0deg) scale(0.9);
+}
+
+.qa-fan:hover .qa-btn--refresh{ transform: translate(-170%, -50%) rotate(-90deg); }
+.qa-fan:hover .qa-btn--copy{ transform: translate(70%, -50%) rotate(90deg); }
+.qa-fan:hover .qa-btn--discord{ transform: translate(-50%, -50%) rotate(0deg); }
+.qa-fan:hover .qa-btn--discord .qa-icon{ animation-play-state: running; }
+
+@keyframes qa-spin{
+  to{ transform: rotate(360deg); }
+}
+
+/* toast shown after copying the IP */
+.qa-toast{
+  position: fixed;
+  right: clamp(16px, 4vw, 28px);
+  bottom: calc(5rem + clamp(16px, 4vh, 28px) + 14px);
+  max-width: min(260px, 60vw);
+  background: rgba(16,31,61,0.96);
+  border: 1px solid rgba(103,200,224,0.35);
+  color: var(--ice, #eaf6ff);
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: 'Inter', system-ui, sans-serif;
+  text-align: right;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.4);
+}
+.qa-toast.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px){
+  .qa-fan-wrap{ transform: scale(0.82); transform-origin: bottom right; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .qa-fan *{ animation: none !important; transition: none !important; }
+}
